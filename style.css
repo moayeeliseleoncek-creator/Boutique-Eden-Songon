@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* RESET GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* VARIABLES */
+:root{
+    --primary: #7d00ff;
+    --secondary: #ff3fcb;
+    --accent: #f7bb16;
+    --dark: #081112;
+    --light: #ffffff;
+}
+
+/* BODY */
+body{
+    background: linear-gradient(180deg, #f144da, #f7bb16);
+    color: var(--dark);
+    line-height: 1.7;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header{
+    background: linear-gradient(135deg, #ef12f3, #f7bb16);
+    padding: 25px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1{
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 800;
+    color: #000;
+    text-align: center;
+}
+
+header ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header a{
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--light);
+}
+
+/* DETAILS */
+details summary{
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--light);
+    transition: 0.3s;
+}
+
+details summary:hover{
+    color: #000;
+}
+
+/* MAIN */
+main{
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto;
+    background: var(--light);
+    padding: clamp(15px, 4vw, 30px);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* TITRES */
+h2{
+    color: var(--primary);
+    margin-top: 30px;
+    font-size: clamp(20px, 3vw, 26px);
+}
+
+/* LISTES */
+ul, ol{
+    padding-left: 22px;
+    margin-top: 10px;
+}
+
+/* LIENS */
+main a{
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+main a:hover{
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* CONTACT BOX */
+.contact-box{
+    background: #f2e9ff;
+    padding: 18px;
+    border-left: 6px solid var(--primary);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* BOUTONS */
+button{
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* 🔥 IMAGES – RESPONSIVE + MÊME TAILLE */
+img{
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+    background: #111;
+    color: #ddd;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: clamp(14px, 2.5vw, 16px);
+}
+
+/* 📱 PETITS TÉLÉPHONES */
+@media (max-width: 480px){
+    img{
+        max-width: 100%;
+        height: 200px;
+    }
+}
+
+/* 📱 TÉLÉPHONES & TABLETTES */
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ul{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    img{
+        max-width: 100%;
+        height: 220px;
+    }
+}
+
+/* 💻 GRANDS ÉCRANS */
+@media (min-width: 1200px){
+    main{
+        max-width: 1200px;
+    }
+
+    img{
+        max-width: 360px;
+        height: 240px;
+    }
+}
