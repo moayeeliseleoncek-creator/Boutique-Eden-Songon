@@ -1,271 +1,203 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* RESET GLOBAL */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    background: linear-gradient(135deg, #f144da, #f7bb16);
-    color: #222;
+/* VARIABLES */
+:root{
+    --primary: #7d00ff;
+    --secondary: #ff3fcb;
+    --accent: #f7bb16;
+    --dark: #081112;
+    --light: #ffffff;
+}
+
+/* BODY */
+body{
+    background: linear-gradient(180deg, #f144da, #f7bb16);
+    color: var(--dark);
     line-height: 1.7;
+    width: 100%;
     overflow-x: hidden;
 }
 
 /* HEADER */
-header {
-    background: linear-gradient(135deg, #7d00ff, #ff3fcb);
+header{
+    background: linear-gradient(135deg, #ef12f3, #f7bb16);
     padding: 25px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid #fff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    border-radius: 0 0 25px 25px;
+    gap: 20px;
 }
 
-header h1 {
-    font-size: clamp(24px, 4vw, 40px);
+header h1{
+    font-size: clamp(22px, 4vw, 36px);
     font-weight: 800;
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    color: #000;
+    text-align: center;
 }
 
-header ul {
+header ul{
     display: flex;
-    gap: 15px;
+    gap: 20px;
     list-style: none;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-header ul li {
-    list-style: none;
-}
-
-header a, header summary {
-    color: #fff;
+header a{
+    color: #000;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
 }
 
-header a:hover, header summary:hover {
-    color: #f7bb16;
-    text-shadow: 0 0 5px #fff;
+header a:hover{
+    color: var(--light);
 }
 
 /* DETAILS */
-details summary {
+details summary{
     cursor: pointer;
     font-weight: 600;
-    color: #fff;
+    color: var(--light);
     transition: 0.3s;
 }
 
-details summary:hover {
-    color: #f7bb16;
+details summary:hover{
+    color: #000;
 }
 
 /* MAIN */
-main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px;
-    background: rgba(255,255,255,0.95);
-    border-radius: 25px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-main:hover {
-    transform: translateY(-3px);
+main{
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto;
+    background: var(--light);
+    padding: clamp(15px, 4vw, 30px);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* TITRES */
-h2 {
-    font-size: clamp(22px, 3vw, 32px);
-    color: #7d00ff;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #ff3fcb, #f7bb16);
-    border-radius: 2px;
-    margin-top: 8px;
-}
-
-/* PARAGRAPHES */
-p {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 15px;
+h2{
+    color: var(--primary);
+    margin-top: 30px;
+    font-size: clamp(20px, 3vw, 26px);
 }
 
 /* LISTES */
-ul, ol {
-    padding-left: 25px;
-    margin-bottom: 15px;
+ul, ol{
+    padding-left: 22px;
+    margin-top: 10px;
 }
 
-li {
-    margin-bottom: 8px;
-}
-
-/* LIENS DANS MAIN */
-main a {
-    color: #ff3fcb;
+/* LIENS */
+main a{
+    color: var(--secondary);
     font-weight: 600;
-    text-decoration: none;
-    position: relative;
-    transition: all 0.3s ease;
 }
 
-main a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background: #7d00ff;
-    transition: 0.3s;
-}
-
-main a:hover::after {
-    width: 100%;
-}
-
-main a:hover {
-    color: #7d00ff;
+main a:hover{
+    color: var(--primary);
+    text-decoration: underline;
 }
 
 /* CONTACT BOX */
-.contact-box {
-    background: linear-gradient(135deg, #f7bb16, #ff3fcb);
-    padding: 20px;
-    border-radius: 20px;
-    margin: 25px 0;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-    color: #fff;
-    transition: transform 0.3s ease;
-}
-
-.contact-box:hover {
-    transform: translateY(-3px);
-}
-
-.contact-box details summary {
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 18px;
-}
+.contact-box{
+    background: #f2e9ff;
+  }
 
 /* BOUTONS */
-button {
-    padding: 12px 35px;
+button{
+    padding: 10px 30px;
     font-size: 16px;
     border: none;
-    border-radius: 40px;
+    border-radius: 30px;
     cursor: pointer;
-    background: linear-gradient(135deg, #ff3fcb, #7d00ff);
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
     color: #fff;
-    font-weight: 600;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-button:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
-/* IMAGES */
-img {
+/* 🔥 IMAGES – RESPONSIVE + MÊME TAILLE */
+img{
     width: 100%;
-    max-width: 360px;
-    height: auto;
+    max-width: 320px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 20px;
-    margin: 15px 10px;
-    transition: all 0.4s ease;
+    border-radius: 18px;
+    margin: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    cursor: pointer;
 }
 
 /* FOOTER */
-footer {
+footer{
     background: #111;
     color: #ddd;
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px;
     margin-top: 40px;
     font-size: clamp(14px, 2.5vw, 16px);
-    letter-spacing: 0.5px;
-    border-top: 4px solid #7d00ff;
 }
 
-/* RESPONSIVE PETITS ÉCRANS */
-@media (max-width: 480px) {
-    header {
+/* 📱 PETITS TÉLÉPHONES */
+@media (max-width: 480px){
+    img{
+        max-width: 100%;
+        height: 200px;
+    }
+}
+
+/* 📱 TÉLÉPHONES & TABLETTES */
+@media (max-width: 768px){
+    header{
         flex-direction: column;
-        gap: 15px;
         text-align: center;
     }
 
-    header ul {
+    header ul{
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 
-    img {
+    img{
         max-width: 100%;
-        height: auto;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
+        height: 220px;
     }
 }
 
-/* RESPONSIVE TABLETTES */
-@media (max-width: 768px) {
-    main {
-        width: 95%;
-        padding: 25px;
-    }
-
-    img {
-        max-width: 100%;
-    }
-}
-
-/* GRANDS ÉCRANS */
-@media (min-width: 1200px) {
-    main {
+/* 💻 GRANDS ÉCRANS */
+@media (min-width: 1200px){
+    main{
         max-width: 1200px;
     }
 
-    img {
-        max-width: 380px;
+    img{
+        max-width: 360px;
+        height: 240px;
     }
 }
+
+  padding: 18px;
+    border-left: 6px solid var(--primary);
+    border-radius: 8px;
+    margin-top: 15px;
