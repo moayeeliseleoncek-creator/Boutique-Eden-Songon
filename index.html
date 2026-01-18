@@ -1,108 +1,244 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>   BOUTIQUE EDEN SONGON SAPH</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-<header>
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-    <h1>BOUTIQUE EDEN SONGON SAPH</h1>
-    <ul>
-        <li>
-            <button><details>
-                <summary>CONTACT</summary>
-                <ul>
-                    <li>0709113073</li>
-                    <li>0708078148</li>
-                    <li>0778488800</li>
-                </ul>
-            </details></button>
-        </li>
-        <li><a href="https://maps.app.goo.gl/aRvNWzq37HhtXqd37">📍Localisation sur Google Maps</a></li>
-    </ul>
+/* VARIABLES */
+:root {
+    --primary: #7d00ff;
+    --secondary: #ff3fcb;
+    --accent: #f7bb16;
+    --dark: #081112;
+    --light: #ffffff;
+}
 
-</header>
+/* BODY */
+body {
+    background: linear-gradient(180deg, #f144da, #f7bb16);
+    color: var(--dark);
+    line-height: 1.7;
+    width: 100%;
+    overflow-x: hidden;
+}
 
-<main>
-    <h2>Bienvenue</h2>
-    <p>La boutique Eden vous souhaite la bienvenue sur son site officiel.</p>
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #ef12f3, #f7bb16);
+    padding: 25px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 4px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-    <h2>Qui sommes-nous ?</h2>
-    <p>Nous sommes une boutique spécialisée dans la vente de volailles de qualité, notamment les poulets de chair.</p>
-    <p>Nous proposons des volailles de très bonne qualité, élevées par notre propre ferme :</p>
-    <ul>
-        <li><strong>Poulet de chair</strong></li>
-    </ul>
-    <img src="images (1).webp" alt="Poulet de 3000 F" style="width:40%; border-radius:10px; margin:15px 0;">
-    <img src="images ch.webp" alt="Poulet de 3000 F" style="width:40%; border-radius:10px; margin:15px 0;">
+header h1 {
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 800;
+    color: #000;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
 
-    <h2>Comment nous contacter ?</h2>
-    <div class="contact-box">
-        <ul>
-            <li><a href="https://wa.me/2250100812799">Cliquez ici pour nous contacter via WhatsApp</a></li>
-        </ul>
-    </div>
+header ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    <h2>Nos prix :</h2>
-    <ol>
-        <li>Poulet 3000 F</li>
-        <li>Poulet 5000 F</li>
-        <li>Poulet 8000 F</li>
-        <li>Poulet 10 000 F</li>
-    </ol>
+header a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-    <h2>Où nous trouver ?</h2>
-    <p>Nous sommes situés à Songon Saph, au 1er Campement, à 100 m de l'ancienne Base de Sogeatom.</p>
-    <p>La boutique est en bordure de route afin de faciliter l’accès à nos clients.</p>
-    <div class="contact-box">
-        <ul>
-            <li><a href="https://maps.app.goo.gl/aRvNWzq37HhtXqd37">Cliquez ici pour voir notre localisation via Google Maps</a></li>
-        </ul>
-    </div>
+header a:hover {
+    color: var(--light);
+}
 
-    <h2>Bon à savoir</h2>
-    <P>Les livraisons sont aussi possible à yamoussoukro(livraison prise en charge par le client), pour tout vos commande à yamoussoukro contacter le numéro suivant :</br><strong>0705038352</strong></P>
-    <p>Nous effectuons également :</p>
-    <p></p>
-    <ul>
-        <li>Gérance immobilière avec UGT(Univers des Grands Travaux)</li>
-        <li>Vente de draps de Ouangolo</li>
-    </ul>
-    <div class="contact-box">
-        <details>
-            <summary>Cliquez ici pour voir nos draps</summary>
-            <img src="IMG-20251209-WA0010.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <img src="IMG-20251209-WA0011.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <img src="IMG-20251209-WA0013.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <img src="IMG-20251209-WA0014.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <img src="IMG-20251209-WA0015.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <img src="IMG-20251209-WA0016.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <img src="IMG-20251209-WA0017.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <img src="IMG-20251209-WA0018.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <img src="IMG-20251209-WA0019.jpg" alt="draps" style="width:40%; border-radius:17px; margin:20px 0;">
-            <p><strong>CONTACT : 0787059036</strong></p>
-        </details>
-    </div>
+details summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--light);
+    transition: 0.3s;
+}
 
-    <ul>
-        <li>Vente de poissons d’eau douce (sosso, carpe)</li>
-    </ul>
+details summary:hover {
+    color: #000;
+}
 
-    <p>Avec <strong>1000 F CFA</strong>, venez prendre votre poulet grillé.</p>
-    <img src="téléchargement.jpg" alt="Poulet de 3000 F" style="width:25%; border-radius:17px; margin:10px 0;">
-    <p>Nous prenons aussi des commandes à distance.</p>
-    <p><strong>NB:</strong> La livraison est prise en charge Par le client .</p>
-  
-</main>
+/* MAIN */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: var(--light);
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
 
-<footer>
-    <p>© 2026 EDEN SONGON SAPH - Des poulets de qualité pour une cuisine réussie.</p>
-</footer>
+main:hover {
+    transform: translateY(-2px);
+}
 
-</body>
-</html>
+/* TITRES */
+h2 {
+    color: var(--primary);
+    margin-top: 30px;
+    font-size: clamp(20px, 3vw, 28px);
+    position: relative;
+    padding-left: 15px;
+}
 
+h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 100%;
+    background: var(--secondary);
+    border-radius: 3px;
+}
+
+/* PARAGRAPHES */
+p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* LISTES */
+ul, ol {
+    padding-left: 22px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* LIENS DANS MAIN */
+main a {
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+main a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* CONTACT BOX */
+.contact-box {
+    background: #f2e9ff;
+    padding: 18px;
+    border-left: 6px solid var(--primary);
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact-box details summary {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* BOUTONS */
+button {
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* IMAGES */
+img {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #ddd;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: clamp(14px, 2.5vw, 16px);
+    letter-spacing: 0.5px;
+}
+
+/* RESPONSIVE PETITS ÉCRANS */
+@media (max-width: 480px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* RESPONSIVE TABLETTES */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* GRANDS ÉCRANS */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+
+    img {
+        max-width: 360px;
+        height: 240px;
+    }
+}
